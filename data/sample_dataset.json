@@ -1,0 +1,12 @@
+[
+  {"id": "TC-001", "input": "Ingest Mesopotamian agricultural records from UNESCO archive", "expected_domain": "Agriculture", "expected_status": "QUEUED", "edge_case": false},
+  {"id": "TC-002", "input": "Query Byzantine medical remedies for epidemic response", "expected_domain": "Medicine", "expected_status": "SUCCESS", "edge_case": false},
+  {"id": "TC-003", "input": "Submit record with missing era field", "expected_domain": "Uncategorized", "expected_status": "LOW_CONFIDENCE", "edge_case": true, "scenario": "Incomplete Data"},
+  {"id": "TC-004", "input": "Duplicate: Mayan Calendar System submitted twice", "expected_domain": "Astronomy", "expected_status": "DEDUPLICATED", "edge_case": true, "scenario": "Duplicate Record"},
+  {"id": "TC-005", "input": "500 concurrent ingest API requests", "expected_domain": "Multi", "expected_status": "QUEUED_WITH_DELAY", "edge_case": true, "scenario": "Concurrent Requests"},
+  {"id": "TC-006", "input": "<script>alert('xss')</script>", "expected_domain": "N/A", "expected_status": "REJECTED", "edge_case": true, "scenario": "Invalid Input"},
+  {"id": "TC-007", "input": "Can you give me a recipe for chocolate cake?", "expected_domain": "N/A", "expected_status": "OUT_OF_DOMAIN", "edge_case": true, "scenario": "Out-of-Domain"},
+  {"id": "TC-008", "input": "Ingest single-source Eurocentric history record", "expected_domain": "Governance & Law", "expected_status": "BIAS_FLAG", "edge_case": true, "scenario": "Bias Detection"},
+  {"id": "TC-009", "input": "Delete corrupted record KE-1099", "user_role": "Administrator", "expected_status": "ADMIN_APPROVED", "edge_case": false},
+  {"id": "TC-010", "input": "Field agent attempts to delete record", "user_role": "Field-Agent", "expected_status": "ACCESS_DENIED", "edge_case": true, "scenario": "RBAC Violation"}
+]
